@@ -14,7 +14,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/55 bg-[rgba(255,255,255,0.84)] backdrop-blur-xl">
-      <div className="mx-auto flex max-w-[90rem] items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-[100%] items-center justify-between gap-4 px-4 py-3 sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1440px] min-[1920px]:max-w-[1800px] min-[2560px]:max-w-[2400px] min-[3440px]:max-w-[3200px] sm:px-6 lg:px-8">
         <Logo priority />
 
         <nav className="hidden items-center gap-2 md:flex">
@@ -74,7 +74,7 @@ export function Header() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden border-t border-brand-line bg-white md:hidden"
           >
-            <nav className="mx-auto flex max-w-[90rem] flex-col gap-2 px-4 py-4 sm:px-6">
+            <nav className="mx-auto flex w-full max-w-[100%] flex-col gap-2 px-4 py-4 sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1440px] min-[1920px]:max-w-[1800px] min-[2560px]:max-w-[2400px] min-[3440px]:max-w-[3200px] sm:px-6">
               {siteConfig.navItems.map((item) => {
                 const active = pathname === item.href;
 

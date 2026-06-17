@@ -22,6 +22,14 @@
   --color-brand-soft: var(--brand-soft);
   --color-brand-surface: var(--brand-surface);
   --color-brand-line: var(--brand-line);
+  
+  /* Fluid Typography for Mobile through Ultrawide */
+  --text-xs: clamp(0.7rem, 0.15vw + 0.65rem, 1.1rem);
+  --text-sm: clamp(0.8rem, 0.2vw + 0.75rem, 1.3rem);
+  --text-base: clamp(1rem, 0.25vw + 0.85rem, 1.6rem);
+  --text-lg: clamp(1.125rem, 0.3vw + 0.95rem, 2rem);
+  --text-xl: clamp(1.25rem, 0.4vw + 1.05rem, 2.4rem);
+  --text-2xl: clamp(1.5rem, 0.5vw + 1.25rem, 3rem);
 }
 
 html {
@@ -91,6 +99,7 @@ img {
 
 .hero-shell {
   position: relative;
+  width: 100%;
 }
 
 .hero-shell::before {
@@ -105,9 +114,67 @@ img {
 
 .section-shell {
   margin: 0 auto;
-  max-width: 90rem;
-  padding: 5rem 1rem;
+  width: 100%;
+  max-width: 100%; /* For mobile */
+  padding: 4rem 1.25rem;
 }
+
+@media (min-width: 640px) {
+  .section-shell {
+    max-width: 640px;
+    padding: 5rem 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-shell {
+    max-width: 768px;
+    padding: 6rem 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    max-width: 1024px;
+    padding: 7rem 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-shell {
+    max-width: 1280px;
+    padding: 8rem 4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-shell {
+    max-width: 1440px;
+    padding: 8.5rem 5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .section-shell {
+    max-width: 1800px;
+    padding: 10rem 6rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .section-shell {
+    max-width: 2400px;
+    padding: 12rem 8rem;
+  }
+}
+
+@media (min-width: 3440px) {
+  .section-shell {
+    max-width: 3200px;
+    padding: 14rem 10rem;
+  }
+}
+
 
 .premium-card {
   border: 1px solid var(--brand-line);
@@ -262,37 +329,28 @@ img {
 }
 
 .text-fluid-3xl {
-  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-size: clamp(2rem, 3.5vw + 1rem, 4rem);
 }
 
 .text-fluid-5xl {
-  font-size: clamp(2.75rem, 7vw, 5rem);
+  font-size: clamp(2.75rem, 6vw + 1rem, 6rem);
 }
 
 .text-fluid-6xl {
-  font-size: clamp(3rem, 8.5vw, 6.35rem);
+  font-size: clamp(3.25rem, 8vw + 1rem, 8.5rem);
 }
 
 @media (min-width: 768px) {
-  .section-shell {
-    padding-inline: 1.5rem;
-    padding-block: 6rem;
-  }
-
   .premium-card {
-    padding: 2rem;
+    padding: 2.5rem;
   }
 
   .cta-banner {
-    padding: 3rem;
+    padding: 3.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .section-shell {
-    padding-inline: 2rem;
-  }
-
   .cta-banner {
     align-items: center;
     justify-content: space-between;
@@ -301,18 +359,65 @@ img {
 }
 
 @media (min-width: 1440px) {
-  .section-shell {
-    padding-block: 6.5rem;
+  .premium-card {
+    padding: 3rem;
+  }
+  .cta-banner {
+    padding: 4rem;
   }
 }
 
 @media (min-width: 1920px) {
   body {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
 
   .premium-card {
-    padding: 2.25rem;
+    padding: 3.5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  body {
+    font-size: 1.35rem;
+  }
+  
+  .premium-card {
+    padding: 4.5rem;
+    border-radius: 3rem;
+  }
+
+  .primary-button,
+  .secondary-button {
+    padding: 1.25rem 2rem;
+    font-size: 1.15rem;
+  }
+
+  .cta-banner {
+    padding: 6rem;
+    border-radius: 3rem;
+  }
+}
+
+@media (min-width: 3440px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  .premium-card {
+    padding: 5.5rem;
+    border-radius: 4rem;
+  }
+  
+  .primary-button,
+  .secondary-button {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.4rem;
+  }
+  
+  .cta-banner {
+    padding: 8rem;
+    border-radius: 4rem;
   }
 }
 

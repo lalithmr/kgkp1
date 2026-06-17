@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-white/45 bg-brand-primary text-white">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent" />
-      <div className="mx-auto grid max-w-[90rem] gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.3fr_0.9fr_1fr] lg:px-8">
+      <div className="mx-auto grid w-full max-w-[100%] gap-10 px-4 py-14 sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] lg:grid-cols-[1.3fr_0.9fr_1fr] xl:max-w-[1280px] 2xl:max-w-[1440px] min-[1920px]:max-w-[1800px] min-[2560px]:max-w-[2400px] min-[3440px]:max-w-[3200px] sm:px-6 lg:px-8">
         <div className="space-y-5">
           <Logo withWordmark={false} className="text-white [&_span]:text-white" />
           <div>

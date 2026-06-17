@@ -9,8 +9,8 @@ export default function HomePage() {
   return (
     <>
       <section className="hero-shell overflow-hidden">
-        <div className="mx-auto grid max-w-[90rem] gap-14 px-4 py-20 sm:px-6 md:py-24 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-28">
-          <AnimatedSection className="max-w-3xl">
+        <div className="mx-auto grid w-full max-w-[100%] gap-14 px-4 py-20 sm:max-w-[640px] md:max-w-[768px] md:py-24 lg:max-w-[1024px] lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-28 xl:max-w-[1280px] 2xl:max-w-[1440px] min-[1920px]:max-w-[1800px] min-[2560px]:max-w-[2400px] min-[3440px]:max-w-[3200px]">
+          <AnimatedSection className="max-w-3xl min-[1920px]:max-w-4xl min-[2560px]:max-w-5xl min-[3440px]:max-w-6xl">
             <p className="text-sm font-semibold uppercase tracking-[0.32em] text-brand-muted">
               {heroContent.eyebrow}
             </p>
