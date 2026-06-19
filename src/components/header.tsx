@@ -21,7 +21,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-line bg-[rgba(255,255,255,0.84)] dark:bg-[rgba(19,26,46,0.84)] backdrop-blur-xl transition-colors duration-300">
+    <header className="sticky top-0 z-50 border-b border-brand-line bg-[rgba(255,255,255,0.84)] dark:bg-[rgba(15,23,42,0.84)] backdrop-blur-xl transition-colors duration-300">
       <div className="mx-auto flex w-full max-w-[100%] items-center justify-between gap-4 px-4 py-3 sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1440px] min-[1920px]:max-w-[1800px] min-[2560px]:max-w-[2400px] min-[3440px]:max-w-[3200px] sm:px-6 lg:px-8">
         <Logo priority />
 
@@ -64,7 +64,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((value) => !value)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-line text-brand-primary transition hover:border-brand-primary hover:bg-brand-soft md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-line text-brand-primary dark:text-brand-text transition hover:border-brand-primary dark:hover:border-brand-accent hover:bg-brand-primary/5 dark:hover:bg-brand-accent/10 md:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={open}
         >
@@ -90,7 +90,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="absolute left-0 top-full w-full border-b border-brand-line bg-brand-surface dark:bg-brand-surface md:hidden shadow-xl"
+            className="absolute left-0 top-full w-full border-b border-brand-line bg-brand-surface dark:bg-[#0F172A] md:hidden shadow-xl"
           >
             <nav className="mx-auto flex w-full max-w-[100%] flex-col gap-3 px-4 py-6 sm:px-6 h-screen">
               {siteConfig.navItems.map((item) => {
@@ -114,13 +114,43 @@ export function Header() {
               
               {/* Theme Toggle in Mobile Menu Only */}
               {mounted && (
-                <button
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="mt-4 flex items-center justify-between rounded-2xl bg-brand-background dark:bg-brand-background px-4 py-4 text-base font-medium text-brand-text dark:text-brand-muted hover:text-brand-primary dark:hover:text-white transition"
-                >
-                  <span>Theme: {theme === "dark" ? "Dark Mode" : "Light Mode"}</span>
-                  {theme === "dark" ? <Moon size={20} /> : <Sun size={20} />}
-                </button>
+                <div className="mt-4 flex flex-col gap-3 rounded-2xl bg-brand-background dark:bg-brand-background px-4 py-4">
+                  <p className="text-xs font-semibold text-brand-muted uppercase tracking-[0.2em]">Appearance</p>
+                  <div className="grid grid-cols-3 gap-2">
+                    <button
+                      onClick={() => setTheme("system")}
+                      className={`flex items-center justify-center gap-2 rounded-xl py-2.5 text-sm font-medium transition ${
+                        theme === "system"
+                          ? "bg-brand-primary text-white shadow-md"
+                          : "bg-brand-surface text-brand-text hover:text-brand-primary dark:text-brand-muted dark:hover:text-white"
+                      }`}
+                    >
+                      System
+                    </button>
+                    <button
+                      onClick={() => setTheme("light")}
+                      className={`flex items-center justify-center gap-2 rounded-xl py-2.5 text-sm font-medium transition ${
+                        theme === "light"
+                          ? "bg-brand-primary text-white shadow-md"
+                          : "bg-brand-surface text-brand-text hover:text-brand-primary dark:text-brand-muted dark:hover:text-white"
+                      }`}
+                    >
+                      <Sun size={14} />
+                      Light
+                    </button>
+                    <button
+                      onClick={() => setTheme("dark")}
+                      className={`flex items-center justify-center gap-2 rounded-xl py-2.5 text-sm font-medium transition ${
+                        theme === "dark"
+                          ? "bg-brand-primary text-white shadow-md"
+                          : "bg-brand-surface text-brand-text hover:text-brand-primary dark:text-brand-muted dark:hover:text-white"
+                      }`}
+                    >
+                      <Moon size={14} />
+                      Dark
+                    </button>
+                  </div>
+                </div>
               )}
             </nav>
           </motion.div>

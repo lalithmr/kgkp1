@@ -34,7 +34,7 @@ export function BottomNav() {
               {active && (
                 <motion.div
                   layoutId="bottom-nav-active"
-                  className="absolute inset-0 bg-brand-soft/20 dark:bg-brand-primary/10 rounded-lg -z-10"
+                  className="absolute inset-0 bg-brand-primary/10 dark:bg-brand-accent/20 rounded-lg -z-10"
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
