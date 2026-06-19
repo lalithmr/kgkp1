@@ -1,11 +1,7 @@
 import { NextResponse } from "next/server";
-import dbConnect from "@/config/db";
-import Contact from "@/models/Contact";
 
 export async function POST(req: Request) {
   try {
-    await dbConnect();
-
     const body = await req.json();
     const { fullName, email, phoneNumber, subject, message } = body;
 
@@ -17,22 +13,18 @@ export async function POST(req: Request) {
       );
     }
 
-    const contact = await Contact.create({
-      fullName,
-      email,
-      phoneNumber,
-      subject,
-      message,
-    });
+    // Process the contact form submission here (e.g. send email)
+    // For now, simulating success since database is removed
+    console.log("Contact form submission received:", { fullName, email, subject });
 
     return NextResponse.json(
-      { message: "Enquiry submitted successfully", contact },
+      { message: "Enquiry submitted successfully" },
       { status: 201 }
     );
   } catch (error: any) {
     console.error("Contact API Error:", error);
     return NextResponse.json(
-      { error: error.message || "Internal Server Error" },
+      { error: "Internal Server Error" },
       { status: 500 }
     );
   }
