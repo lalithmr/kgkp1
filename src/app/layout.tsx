@@ -7,6 +7,7 @@ import { Header } from "@/components/header";
 import { BottomNav } from "@/components/bottom-nav";
 import { ThemeProvider } from "@/components/theme-provider";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { CustomCursor } from "@/components/custom-cursor";
 import { siteConfig } from "@/data/site";
 
 import "./globals.css";
@@ -49,6 +50,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.siteUrl,
   },
+  icons: {
+    icon: "/kgkp-logo.svg",
+    shortcut: "/kgkp-logo.svg",
+    apple: "/kgkp-logo.svg",
+  },
+  manifest: "/manifest.json",
 };
 
 const structuredData = {
@@ -101,6 +108,7 @@ export default function RootLayout({
             <Footer />
             <BottomNav />
             <WhatsAppButton />
+            <CustomCursor />
           </div>
         </ThemeProvider>
       </body>

@@ -33,13 +33,23 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                className={`group relative px-4 py-2 text-sm font-medium transition-colors duration-300 ${
                   active
-                    ? "bg-brand-primary dark:bg-brand-accent text-white shadow-lg"
-                    : "text-brand-text hover:bg-brand-soft hover:text-brand-primary dark:text-brand-muted dark:hover:bg-brand-line dark:hover:text-white"
+                    ? "text-brand-primary dark:text-brand-accent"
+                    : "text-brand-text hover:text-brand-primary dark:text-brand-muted dark:hover:text-white"
                 }`}
               >
                 {item.label}
+                {active && (
+                  <motion.div
+                    layoutId="navbar-active"
+                    className="absolute bottom-0 left-0 h-[2px] w-full bg-brand-primary dark:bg-brand-accent"
+                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                  />
+                )}
+                {!active && (
+                  <span className="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-brand-primary dark:bg-white transition-all duration-300 group-hover:w-full" />
+                )}
               </Link>
             );
           })}

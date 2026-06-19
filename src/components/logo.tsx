@@ -15,16 +15,16 @@ export function Logo({
   return (
     <Link
       href="/"
-      className={`inline-flex items-center gap-3 ${className}`.trim()}
+      className={`group inline-flex items-center gap-3 transition-transform duration-300 hover:scale-[1.02] ${className}`.trim()}
       aria-label="KGKP Consultancy Home"
     >
       <Image
         src="/kgkp-logo.svg"
         alt="KGKP Consultancy logo"
-        width={60}
-        height={60}
+        width={72}
+        height={72}
         priority={priority}
-        className="h-9 w-9 md:h-11 md:w-11 lg:h-[52px] lg:w-[52px] xl:h-[60px] xl:w-[60px] rounded-full ring-1 ring-brand-line object-contain"
+        className="h-10 w-10 md:h-12 md:w-12 lg:h-[60px] lg:w-[60px] xl:h-[72px] xl:w-[72px] rounded-full border-[1.5px] border-brand-primary/20 bg-white shadow-sm p-[2px] object-contain"
       />
       {withWordmark ? (
         <span className="flex flex-col justify-center">

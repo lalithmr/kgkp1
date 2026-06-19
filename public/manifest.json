@@ -1,0 +1,24 @@
+{
+  "name": "KGKP Consultancy",
+  "short_name": "KGKP",
+  "description": "Where Knowledge Creates Confidence. Premium Chartered Accountants & Business Advisors in Bangalore.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#2B4C65",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}

@@ -27,7 +27,7 @@ export function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="transition hover:text-white"
+                className="inline-block transition-all duration-300 hover:-translate-y-1 hover:text-white hover:drop-shadow-[0_4px_8px_rgba(255,255,255,0.25)]"
               >
                 {item.label}
               </Link>
@@ -38,10 +38,11 @@ export function Footer() {
         <div>
           <p className="font-heading text-xl">Contact</p>
           <div className="mt-5 space-y-3 text-sm leading-7 text-white/80">
-            <a href={siteConfig.phoneHref} className="block transition hover:text-white">
+            <a href={siteConfig.phoneHref} className="inline-block transition-all duration-300 hover:-translate-y-1 hover:text-white hover:drop-shadow-[0_4px_8px_rgba(255,255,255,0.25)]">
               {siteConfig.phone}
             </a>
-            <a href={siteConfig.emailHref} className="block transition hover:text-white">
+            <br />
+            <a href={siteConfig.emailHref} className="inline-block transition-all duration-300 hover:-translate-y-1 hover:text-white hover:drop-shadow-[0_4px_8px_rgba(255,255,255,0.25)]">
               {siteConfig.email}
             </a>
             <p>{siteConfig.address}</p>
