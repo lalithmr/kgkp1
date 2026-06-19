@@ -48,7 +48,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 px-4 py-5 text-center text-xs tracking-[0.16em] text-white/60 uppercase">
+      <div className="border-t border-white/10 px-4 py-5 pb-[88px] md:pb-5 text-center text-xs tracking-[0.16em] text-white/60 uppercase">
         {siteConfig.tagline}
       </div>
     </footer>

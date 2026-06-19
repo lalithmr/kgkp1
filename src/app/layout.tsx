@@ -4,6 +4,8 @@ import Script from "next/script";
 
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { BottomNav } from "@/components/bottom-nav";
+import { ThemeProvider } from "@/components/theme-provider";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { siteConfig } from "@/data/site";
 
@@ -81,23 +83,26 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${garamond.variable}`}>
       <body>
-        <Script
-          id="kgkp-structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-        <div className="site-background">
-          <a
-            href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-brand-primary focus:px-4 focus:py-3 focus:text-white"
-          >
-            Skip to content
-          </a>
-          <Header />
-          <main id="main-content">{children}</main>
-          <Footer />
-          <WhatsAppButton />
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Script
+            id="kgkp-structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          />
+          <div className="site-background">
+            <a
+              href="#main-content"
+              className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-brand-primary focus:px-4 focus:py-3 focus:text-white"
+            >
+              Skip to content
+            </a>
+            <Header />
+            <main id="main-content">{children}</main>
+            <Footer />
+            <BottomNav />
+            <WhatsAppButton />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

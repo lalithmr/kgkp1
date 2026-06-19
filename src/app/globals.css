@@ -1,16 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --brand-primary: #2b4c65;
-  --brand-secondary: #6b8ba4;
-  --brand-accent: #95b4cc;
-  --brand-text: #1d1c22;
+  --brand-primary: #1F235F;
+  --brand-secondary: #5E72FF;
+  --brand-accent: #5E72FF;
+  --brand-text: #334155;
+  --brand-heading: #0F172A;
   --brand-white: #ffffff;
-  --brand-body: color-mix(in srgb, #1d1c22 72%, white 28%);
-  --brand-soft: color-mix(in srgb, #95b4cc 20%, white 80%);
-  --brand-surface: color-mix(in srgb, #95b4cc 10%, white 90%);
-  --brand-line: rgba(43, 76, 101, 0.14);
-  --shadow-premium: 0 24px 70px rgba(43, 76, 101, 0.12);
+  --brand-body: #334155;
+  --brand-muted: #64748B;
+  --brand-surface: #FFFFFF;
+  --brand-line: #E2E8F0;
+  --brand-background: #F8FAFC;
+  --brand-whatsapp: #25D366;
+  --shadow-premium: 0 24px 70px rgba(31, 35, 95, 0.12);
+}
+
+.dark {
+  --brand-primary: #4B56D2;
+  --brand-secondary: #5E72FF;
+  --brand-accent: #5E72FF;
+  --brand-text: #E2E8F0;
+  --brand-heading: #FFFFFF;
+  --brand-white: #131A2E;
+  --brand-body: #E2E8F0;
+  --brand-muted: #94A3B8;
+  --brand-surface: #131A2E;
+  --brand-line: #2A344D;
+  --brand-background: #0B1020;
+  --brand-whatsapp: #25D366;
+  --shadow-premium: 0 24px 70px rgba(0, 0, 0, 0.4);
 }
 
 @theme inline {
@@ -18,10 +37,13 @@
   --color-brand-secondary: var(--brand-secondary);
   --color-brand-accent: var(--brand-accent);
   --color-brand-text: var(--brand-text);
+  --color-brand-heading: var(--brand-heading);
   --color-brand-body: var(--brand-body);
-  --color-brand-soft: var(--brand-soft);
+  --color-brand-muted: var(--brand-muted);
   --color-brand-surface: var(--brand-surface);
   --color-brand-line: var(--brand-line);
+  --color-brand-background: var(--brand-background);
+  --color-brand-whatsapp: var(--brand-whatsapp);
   
   /* Fluid Typography for Mobile through Ultrawide */
   --text-xs: clamp(0.7rem, 0.15vw + 0.65rem, 1.1rem);
@@ -40,14 +62,7 @@ body {
   margin: 0;
   min-width: 320px;
   overflow-x: clip;
-  background: linear-gradient(
-      180deg,
-      rgba(149, 180, 204, 0.16) 0%,
-      rgba(255, 255, 255, 0.6) 16%,
-      #ffffff 42%,
-      rgba(149, 180, 204, 0.12) 100%
-    ),
-    #ffffff;
+  background-color: var(--brand-background);
   color: var(--brand-text);
   font-family: var(--font-body), Georgia, serif;
   text-rendering: optimizeLegibility;

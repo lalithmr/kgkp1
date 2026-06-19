@@ -21,17 +21,17 @@ export function Logo({
       <Image
         src="/kgkp-logo.svg"
         alt="KGKP Consultancy logo"
-        width={52}
-        height={52}
+        width={60}
+        height={60}
         priority={priority}
-        className="h-11 w-11 rounded-full ring-1 ring-[rgba(43,76,101,0.14)]"
+        className="h-9 w-9 md:h-11 md:w-11 lg:h-[52px] lg:w-[52px] xl:h-[60px] xl:w-[60px] rounded-full ring-1 ring-brand-line object-contain"
       />
       {withWordmark ? (
-        <span className="flex flex-col">
-          <span className="font-heading text-lg font-semibold tracking-[0.08em] text-brand-primary">
+        <span className="flex flex-col justify-center">
+          <span className="font-heading text-base md:text-lg lg:text-xl font-semibold tracking-[0.08em] text-brand-primary dark:text-brand-heading leading-tight">
             KGKP
           </span>
-          <span className="text-xs uppercase tracking-[0.28em] text-brand-muted">
+          <span className="text-[10px] md:text-xs uppercase tracking-[0.28em] text-brand-muted leading-tight">
             Consultancy
           </span>
         </span>
