@@ -8,10 +8,20 @@ export default function manifest(): MetadataRoute.Manifest {
     start_url: '/',
     display: 'standalone',
     background_color: '#F8FAFC',
-    theme_color: '#1F235F',
+    theme_color: '#1B1C46',
     icons: [
       {
-        src: '/kgkp-logo.svg',
+        src: '/android-chrome-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        src: '/android-chrome-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
+      {
+        src: '/logo-light.svg',
         sizes: 'any',
         type: 'image/svg+xml',
       },

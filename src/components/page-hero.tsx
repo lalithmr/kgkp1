@@ -4,12 +4,20 @@ type PageHeroProps = {
   eyebrow: string;
   title: string;
   description: string;
+  secondaryButtonLabel?: string;
+  secondaryButtonHref?: string;
 };
 
-export function PageHero({ eyebrow, title, description }: PageHeroProps) {
+export function PageHero({ 
+  eyebrow, 
+  title, 
+  description,
+  secondaryButtonLabel = "Explore Services",
+  secondaryButtonHref = "/services"
+}: PageHeroProps) {
   return (
-    <section className="hero-shell overflow-hidden">
-      <div className="mx-auto w-full max-w-[100%] px-4 py-20 sm:max-w-[640px] md:max-w-[768px] md:py-24 lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1440px] min-[1920px]:max-w-[1800px] min-[2560px]:max-w-[2400px] min-[3440px]:max-w-[3200px] sm:px-6 lg:px-8">
+    <section className="hero-shell section-shell section-hero overflow-hidden">
+      <div className="mx-auto w-full max-w-[100%] px-[20px] md:px-[32px] lg:px-[48px] xl:px-[64px] min-[1600px]:max-w-[1600px] min-[1600px]:px-[80px]">
         <div className="max-w-3xl min-[1920px]:max-w-4xl min-[2560px]:max-w-5xl min-[3440px]:max-w-6xl">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-muted">
             {eyebrow}
@@ -24,8 +32,8 @@ export function PageHero({ eyebrow, title, description }: PageHeroProps) {
             <Link href="/contact" className="primary-button">
               Book a Consultation
             </Link>
-            <Link href="/services" className="secondary-button">
-              Explore Services
+            <Link href={secondaryButtonHref} className="secondary-button">
+              {secondaryButtonLabel}
             </Link>
           </div>
         </div>

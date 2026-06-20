@@ -19,14 +19,15 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Specialized services for accounting, compliance, and business growth"
         description="From audit and taxation to startup registrations and certifications, KGKP Consultancy provides clear, dependable support across critical financial and regulatory functions."
+        secondaryButtonLabel="About Us"
+        secondaryButtonHref="/about"
       />
 
-      <AnimatedSection className="section-shell">
+      <AnimatedSection className="section-shell section-services">
         <SectionHeading
           eyebrow="Service Portfolio"
           title="Comprehensive support across business and individual requirements"
           description="Each engagement is handled with a focus on accuracy, timeliness, and practical execution."
-          align="center"
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => (

@@ -20,7 +20,7 @@ export default function AboutPage() {
         description="KGKP Consultancy delivers thoughtful professional support for businesses and individuals who value clarity, responsiveness, and ethical financial guidance."
       />
 
-      <AnimatedSection className="section-shell">
+      <AnimatedSection className="section-shell section-spacing">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <SectionHeading
             eyebrow="About the Firm"
@@ -41,7 +41,7 @@ export default function AboutPage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="section-shell pt-0">
+      <AnimatedSection className="section-shell section-spacing">
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="premium-card">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-muted">
@@ -68,12 +68,11 @@ export default function AboutPage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="section-shell pt-0">
+      <AnimatedSection className="section-shell section-spacing">
         <SectionHeading
           eyebrow="Professional Values"
           title="The standards that shape every client relationship"
           description="We prioritize dependable communication, careful execution, and advice that remains grounded in real-world business needs."
-          align="center"
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {aboutPageContent.values.map((value) => (

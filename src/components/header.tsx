@@ -21,8 +21,8 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-line bg-[rgba(255,255,255,0.84)] dark:bg-[rgba(15,23,42,0.84)] backdrop-blur-xl transition-colors duration-300">
-      <div className="mx-auto flex w-full max-w-[100%] items-center justify-between gap-4 px-4 py-3 sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1440px] min-[1920px]:max-w-[1800px] min-[2560px]:max-w-[2400px] min-[3440px]:max-w-[3200px] sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-brand-line bg-[rgba(255,255,255,0.84)] dark:bg-[rgba(11,16,32,0.84)] backdrop-blur-xl transition-colors duration-300">
+      <div className="mx-auto flex w-full max-w-[100%] items-center justify-between gap-4 px-[20px] py-3 md:px-[32px] lg:px-[48px] xl:px-[64px] min-[1600px]:max-w-[1600px] min-[1600px]:px-[80px]">
         <Logo priority />
 
         <nav className="hidden items-center gap-2 md:flex">
@@ -90,7 +90,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="absolute left-0 top-full w-full border-b border-brand-line bg-brand-surface dark:bg-[#0F172A] md:hidden shadow-xl"
+            className="absolute left-0 top-full w-full border-b border-brand-line bg-brand-surface dark:bg-[#0B1020] md:hidden shadow-xl"
           >
             <nav className="mx-auto flex w-full max-w-[100%] flex-col gap-3 px-4 py-6 sm:px-6 h-screen">
               {siteConfig.navItems.map((item) => {

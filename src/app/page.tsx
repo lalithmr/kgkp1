@@ -8,8 +8,8 @@ import { aboutPreview, heroContent, services, siteConfig, whyChooseUs } from "@/
 export default function HomePage() {
   return (
     <>
-      <section className="hero-shell overflow-hidden">
-        <div className="mx-auto grid w-full max-w-[100%] gap-14 px-4 py-20 sm:max-w-[640px] md:max-w-[768px] md:py-24 lg:max-w-[1024px] lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-28 xl:max-w-[1280px] 2xl:max-w-[1440px] min-[1920px]:max-w-[1800px] min-[2560px]:max-w-[2400px] min-[3440px]:max-w-[3200px]">
+      <section className="hero-shell section-shell section-hero overflow-hidden">
+        <div className="mx-auto grid w-full gap-14 lg:grid-cols-[1.15fr_0.85fr] items-center">
           <AnimatedSection className="max-w-3xl min-[1920px]:max-w-4xl min-[2560px]:max-w-5xl min-[3440px]:max-w-6xl">
             <p className="text-sm font-semibold uppercase tracking-[0.32em] text-brand-muted">
               {heroContent.eyebrow}
@@ -21,8 +21,8 @@ export default function HomePage() {
               {heroContent.subtitle}
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/contact" className="primary-button">
-                Book a Consultation
+              <Link href="/services" className="primary-button">
+                Explore Services
               </Link>
               <Link href="/contact" className="secondary-button">
                 Contact Us
@@ -45,7 +45,7 @@ export default function HomePage() {
           </AnimatedSection>
 
           <AnimatedSection className="relative" delay={0.1}>
-            <div className="premium-card relative overflow-hidden p-8 sm:p-10">
+            <div className="premium-card relative overflow-hidden">
               <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-brand-primary/70 to-transparent" />
               <p className="text-sm font-semibold uppercase tracking-[0.26em] text-brand-muted">
                 Where Knowledge Creates Confidence
@@ -90,7 +90,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <AnimatedSection className="section-shell">
+      <AnimatedSection className="section-shell section-about">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <SectionHeading
             eyebrow="About Preview"
@@ -104,7 +104,7 @@ export default function HomePage() {
               "Client-focused communication that stays practical and clear",
               "Professional support designed for responsive execution",
             ].map((item) => (
-              <div key={item} className="premium-card min-h-40">
+              <div key={item} className="premium-card card-feature min-h-40 flex items-center">
                 <p className="font-heading text-2xl text-brand-heading">{item}</p>
               </div>
             ))}
@@ -112,12 +112,11 @@ export default function HomePage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="section-shell pt-0">
+      <AnimatedSection className="section-shell section-services">
         <SectionHeading
           eyebrow="Services"
           title="Solutions Designed Around Accuracy, Compliance, and Growth"
           description="We support businesses, startups, professionals, and individuals with structured financial services that reduce complexity and strengthen decision-making."
-          align="center"
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => (
@@ -126,7 +125,7 @@ export default function HomePage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="section-shell">
+      <AnimatedSection className="section-shell section-about">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <SectionHeading
             eyebrow="Why Choose Us"
@@ -135,7 +134,7 @@ export default function HomePage() {
           />
           <div className="grid gap-4 sm:grid-cols-2">
             {whyChooseUs.map((item) => (
-              <div key={item} className="premium-card flex items-start gap-4">
+              <div key={item} className="premium-card card-feature flex items-start gap-4">
                 <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-brand-primary text-white">
                   +
                 </span>
@@ -146,7 +145,7 @@ export default function HomePage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="section-shell pt-0">
+      <AnimatedSection className="section-shell section-contact">
         <div className="cta-banner">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-muted">

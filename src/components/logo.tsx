@@ -15,20 +15,28 @@ export function Logo({
   return (
     <Link
       href="/"
-      className={`group inline-flex items-center gap-3 transition-transform duration-300 hover:scale-[1.02] ${className}`.trim()}
+      className={`group inline-flex items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 transition-transform duration-300 hover:scale-[1.02] shrink-0 ${className}`.trim()}
       aria-label="KGKP Consultancy Home"
     >
       <Image
-        src="/kgkp-logo.svg"
+        src="/logo-light.svg"
         alt="KGKP Consultancy logo"
-        width={72}
-        height={72}
+        width={140}
+        height={140}
         priority={priority}
-        className="h-10 w-10 md:h-12 md:w-12 lg:h-[60px] lg:w-[60px] xl:h-[72px] xl:w-[72px] rounded-full border-[1.5px] border-brand-primary/20 bg-white shadow-sm p-[2px] object-contain"
+        className="h-14 w-14 sm:h-16 sm:w-16 md:h-[100px] md:w-[100px] lg:h-[120px] lg:w-[120px] xl:h-[140px] xl:w-[140px] shrink-0 object-contain dark:hidden"
+      />
+      <Image
+        src="/logo-dark.svg"
+        alt="KGKP Consultancy logo"
+        width={140}
+        height={140}
+        priority={priority}
+        className="hidden h-14 w-14 sm:h-16 sm:w-16 md:h-[100px] md:w-[100px] lg:h-[120px] lg:w-[120px] xl:h-[140px] xl:w-[140px] shrink-0 object-contain dark:block"
       />
       {withWordmark ? (
-        <span className="flex flex-col justify-center">
-          <span className="font-heading text-base md:text-lg lg:text-xl font-semibold tracking-[0.08em] text-brand-primary dark:text-brand-heading leading-tight">
+        <span className="flex flex-col justify-center whitespace-nowrap">
+          <span className="font-heading text-sm md:text-base lg:text-lg font-medium tracking-[0.08em] text-[#1B1C46] dark:text-[#E2E8F0] leading-tight">
             KGKP
           </span>
           <span className="text-[10px] md:text-xs uppercase tracking-[0.28em] text-brand-muted leading-tight">

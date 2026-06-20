@@ -1,11 +1,14 @@
-@import "tailwindcss";
+const fs = require('fs');
+const path = require('path');
+
+const cssContent = `@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --brand-primary: #1B1C46;
-  --brand-secondary: #1B1C46;
-  --brand-accent: #1B1C46;
+  --brand-primary: #1F235F;
+  --brand-secondary: #6B8BA4;
+  --brand-accent: #5E72FF;
   --brand-text: #334155;
   --brand-heading: #0F172A;
   --brand-white: #FFFFFF;
@@ -16,15 +19,14 @@
   --brand-background: #F8FAFC;
   --brand-section: #FFFFFF;
   --brand-whatsapp: #25D366;
-  --brand-button: #1B1C46;
-  --brand-button-hover: #2A2C6E;
-  --brand-button-active: #11122D;
-  --shadow-premium: 0 12px 40px -10px rgba(43, 76, 101, 0.15), 0 0 0 1px rgba(43, 76, 101, 0.05);
+  --brand-button: #1F235F;
+  --brand-button-hover: #5E72FF;
+  --shadow-premium: 0 12px 40px -10px rgba(31, 35, 95, 0.15), 0 0 0 1px rgba(31, 35, 95, 0.05);
 
   /* Typography Variables Default to Mobile */
   --font-heading: var(--font-outfit);
   --font-body: var(--font-inter);
-
+  
   --weight-h1: 700;
   --weight-h2: 700;
   --weight-h3: 500;
@@ -36,9 +38,9 @@
 }
 
 .dark {
-  --brand-primary: #1B1C46;
-  --brand-secondary: #1B1C46;
-  --brand-accent: #1B1C46;
+  --brand-primary: #4B56D2;
+  --brand-secondary: #6B8BA4;
+  --brand-accent: #5E72FF;
   --brand-text: #E2E8F0;
   --brand-heading: #FFFFFF;
   --brand-white: #FFFFFF;
@@ -49,9 +51,8 @@
   --brand-background: #0B1020;
   --brand-section: #0B1020;
   --brand-whatsapp: #25D366;
-  --brand-button: #1B1C46;
-  --brand-button-hover: #2A2C6E;
-  --brand-button-active: #11122D;
+  --brand-button: #4B56D2;
+  --brand-button-hover: #5E72FF;
   --shadow-premium: 0 12px 40px -10px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
@@ -157,44 +158,9 @@ img {
   font-family: var(--font-heading), sans-serif;
 }
 
-h1,
-.h1 {
-  font-family: var(--font-heading), sans-serif;
-  font-size: var(--h1-size);
-  font-weight: var(--weight-h1);
-  line-height: 1.1;
-  text-wrap: balance;
-  color: var(--brand-heading);
-  margin-bottom: 1.5rem;
-  max-width: 100%;
-  word-break: break-word;
-}
-
-h2,
-.h2 {
-  font-family: var(--font-heading), sans-serif;
-  font-size: var(--h2-size);
-  font-weight: var(--weight-h2);
-  line-height: 1.2;
-  text-wrap: balance;
-  color: var(--brand-heading);
-  margin-bottom: 1.25rem;
-  max-width: 100%;
-  word-break: break-word;
-}
-
-h3,
-.h3 {
-  font-family: var(--font-heading), sans-serif;
-  font-size: var(--h3-size);
-  font-weight: var(--weight-h3);
-  line-height: 1.3;
-  text-wrap: balance;
-  color: var(--brand-heading);
-  margin-bottom: 1rem;
-  max-width: 100%;
-  word-break: break-word;
-}
+h1, .h1 { font-family: var(--font-heading), sans-serif; font-size: var(--h1-size); font-weight: var(--weight-h1); line-height: 1.1; text-wrap: balance; color: var(--brand-heading); margin-bottom: 1.5rem; max-width: 100%; word-break: break-word; }
+h2, .h2 { font-family: var(--font-heading), sans-serif; font-size: var(--h2-size); font-weight: var(--weight-h2); line-height: 1.2; text-wrap: balance; color: var(--brand-heading); margin-bottom: 1.25rem; max-width: 100%; word-break: break-word; }
+h3, .h3 { font-family: var(--font-heading), sans-serif; font-size: var(--h3-size); font-weight: var(--weight-h3); line-height: 1.3; text-wrap: balance; color: var(--brand-heading); margin-bottom: 1rem; max-width: 100%; word-break: break-word; }
 
 /* Backgrounds */
 .site-background {
@@ -241,172 +207,34 @@ h3,
   margin: 0 auto;
   width: 100%;
   max-width: 100%;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  /* Mobile (320px-767px) */
+  padding: clamp(4.5rem, 15vw, 5.5rem) 1.25rem;
 }
 
 @media (min-width: 768px) {
   .section-shell {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: clamp(5.5rem, 10vw, 6.5rem) 2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-shell {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding: clamp(6.5rem, 8vw, 8rem) 3rem;
   }
 }
 
 @media (min-width: 1440px) {
   .section-shell {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding: clamp(8rem, 10vw, 10rem) 4rem;
   }
 }
 
 @media (min-width: 1600px) {
   .section-shell {
     max-width: 1600px;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: clamp(10rem, 10vw, 12.5rem) 5rem;
   }
 }
-
-/* Vertical Rhythm Utilities */
-.section-hero {
-  padding-top: 6rem;
-  padding-bottom: 4rem;
-}
-
-.section-spacing,
-.section-about,
-.section-services,
-.section-contact {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
-}
-
-.section-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-@media (min-width: 768px) {
-  .section-hero {
-    padding-top: 8rem;
-    padding-bottom: 5.5rem;
-  }
-
-  .section-spacing,
-  .section-about,
-  .section-services,
-  .section-contact {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
-  }
-
-  .section-footer {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .section-hero {
-    padding-top: 10rem;
-    padding-bottom: 6.5rem;
-  }
-
-  .section-spacing,
-  .section-about,
-  .section-services,
-  .section-contact {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
-
-  .section-footer {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .section-hero {
-    padding-top: 12rem;
-    padding-bottom: 8rem;
-  }
-
-  .section-spacing,
-  .section-about,
-  .section-services,
-  .section-contact {
-    padding-top: 8.5rem;
-    padding-bottom: 8.5rem;
-  }
-
-  .section-footer {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-}
-
-/* Card Padding Refinement */
-.card-service {
-  padding: 2rem;
-}
-
-.card-contact {
-  padding: 1.5rem;
-}
-
-.card-location {
-  padding: 1.25rem;
-}
-
-.card-feature {
-  padding: 1rem;
-}
-
-@media (min-width: 768px) {
-  .card-service {
-    padding: 2.5rem;
-  }
-
-  .card-contact {
-    padding: 2rem;
-  }
-
-  .card-location {
-    padding: 1.5rem;
-  }
-
-  .card-feature {
-    padding: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .card-service {
-    padding: 3rem;
-  }
-
-  .card-contact {
-    padding: 2rem;
-  }
-
-  .card-location {
-    padding: 2rem;
-  }
-
-  .card-feature {
-    padding: 1.25rem;
-  }
-}
-
-/* Removed conflicting button definitions */
 
 /* Premium Card */
 .premium-card {
@@ -420,16 +248,12 @@ h3,
 }
 
 @media (min-width: 768px) {
-  .premium-card {
-    padding: 2rem;
-  }
+  .premium-card { padding: 2rem; }
 }
 
 @media (min-width: 1024px) {
-  .premium-card {
-    padding: 2.5rem;
-  }
-
+  .premium-card { padding: 2.5rem; }
+  
   .premium-card:hover {
     transform: translateY(-8px);
     border-color: var(--brand-accent);
@@ -443,16 +267,11 @@ h3,
 }
 
 @media (min-width: 1440px) {
-  .premium-card {
-    padding: 3rem;
-  }
+  .premium-card { padding: 3rem; }
 }
 
 @media (min-width: 1920px) {
-  .premium-card {
-    padding: 3.5rem;
-    border-radius: 2.5rem;
-  }
+  .premium-card { padding: 3.5rem; border-radius: 2.5rem; }
 }
 
 /* Buttons */
@@ -460,37 +279,12 @@ h3,
 .secondary-button {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
+  gap: 0.7rem;
   border-radius: 999px;
-  padding: 1rem 2rem;
+  padding: 1rem 1.75rem;
   font-size: 1rem;
   font-weight: 600;
-  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms ease, color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
-}
-
-@media (min-width: 768px) {
-  .primary-button,
-  .secondary-button {
-    padding: 1.125rem 2.25rem;
-    font-size: 1.0625rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .primary-button,
-  .secondary-button {
-    padding: 1.25rem 2.75rem;
-    font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .primary-button,
-  .secondary-button {
-    padding: 1.375rem 3.25rem;
-    font-size: 1.1875rem;
-  }
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .primary-button {
@@ -500,15 +294,9 @@ h3,
 }
 
 .primary-button:hover {
-  transform: translateY(-3px) scale(1.02);
+  transform: translateY(-2px);
   background: var(--brand-button-hover);
-  box-shadow: 0 12px 32px -8px rgba(27, 28, 70, 0.4);
-}
-
-.primary-button:active {
-  transform: translateY(0) scale(0.98);
-  background: var(--brand-button-active);
-  box-shadow: 0 4px 16px -4px rgba(27, 28, 70, 0.4);
+  box-shadow: 0 12px 32px -8px rgba(31, 35, 95, 0.4);
 }
 
 .secondary-button {
@@ -522,36 +310,6 @@ h3,
   border-color: var(--brand-button-hover);
   background: var(--brand-button-hover);
   color: var(--brand-white);
-}
-
-/* Dark Mode Button Refinement */
-.dark .primary-button {
-  background: linear-gradient(135deg, #1F2154 0%, #2F327D 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 24px -6px rgba(47, 50, 125, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  color: #FFFFFF;
-}
-
-.dark .primary-button:hover {
-  background: linear-gradient(135deg, #272A66 0%, #393C91 100%);
-  box-shadow: 0 12px 32px -8px rgba(47, 50, 125, 0.7), 0 0 20px -5px rgba(47, 50, 125, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-}
-
-.dark .primary-button:active {
-  background: linear-gradient(135deg, #1B1D4A 0%, #272A66 100%);
-  box-shadow: 0 4px 16px -4px rgba(47, 50, 125, 0.6);
-}
-
-.dark .secondary-button {
-  background: transparent;
-  border: 1px solid #393C91;
-  color: #E2E8F0;
-}
-
-.dark .secondary-button:hover {
-  background: rgba(47, 50, 125, 0.25);
-  border-color: #4B4FC2;
-  color: #FFFFFF;
 }
 
 /* Components */
@@ -619,13 +377,14 @@ h3,
   html {
     scroll-behavior: auto;
   }
-
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
+`;
+
+fs.writeFileSync(path.join(__dirname, 'src', 'app', 'globals.css'), cssContent);
+console.log('globals.css updated with responsive typography and spacing system.');

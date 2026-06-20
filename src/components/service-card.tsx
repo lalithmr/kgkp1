@@ -21,7 +21,7 @@ export function ServiceCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.55, delay: index * 0.06 }}
-      className="premium-card group h-full"
+      className="premium-card card-service group h-full"
     >
       <div className="flex h-full flex-col">
         <div className="flex items-center gap-3">

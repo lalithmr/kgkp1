@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { EB_Garamond, Playfair_Display } from "next/font/google";
+import { Outfit, Manrope, Playfair_Display, Cormorant_Garamond, Inter } from "next/font/google";
 import Script from "next/script";
 
 import { Footer } from "@/components/footer";
@@ -12,15 +12,34 @@ import { siteConfig } from "@/data/site";
 
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-heading",
+  variable: "--font-outfit",
   display: "swap",
 });
 
-const garamond = EB_Garamond({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -50,12 +69,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.siteUrl,
   },
-  icons: {
-    icon: "/kgkp-logo.svg",
-    shortcut: "/kgkp-logo.svg",
-    apple: "/kgkp-logo.svg",
-  },
-  manifest: "/manifest.json",
 };
 
 const structuredData = {
@@ -88,7 +101,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${garamond.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${outfit.variable} ${manrope.variable} ${playfair.variable} ${cormorant.variable} ${inter.variable}`} suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Script

@@ -21,11 +21,11 @@ export default function ContactPage() {
         description="Reach out for responsive guidance, consultation scheduling, and professional support tailored to your business or personal requirements."
       />
 
-      <AnimatedSection className="section-shell">
+      <AnimatedSection className="section-shell section-contact">
         <div className="grid gap-8 xl:grid-cols-[1.05fr_0.95fr]">
           <ContactForm />
           <div className="grid gap-6">
-            <div className="premium-card">
+            <div className="premium-card card-contact">
               <SectionHeading
                 eyebrow="Direct Contact"
                 title="Connect with KGKP Consultancy"
@@ -33,11 +33,11 @@ export default function ContactPage() {
               />
               <div className="mt-8 grid gap-4">
                 <a href={siteConfig.phoneHref} className="contact-link-card">
-                  <span className="contact-link-label">Phone</span>
+                  <span className="contact-link-label">Phone : </span>
                   <span className="contact-link-value">{siteConfig.phone}</span>
                 </a>
                 <a href={siteConfig.emailHref} className="contact-link-card">
-                  <span className="contact-link-label">Email</span>
+                  <span className="contact-link-label">Email : </span>
                   <span className="contact-link-value">{siteConfig.email}</span>
                 </a>
                 <a
@@ -52,7 +52,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="premium-card">
+            <div className="premium-card card-location">
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-muted">
                 Address
               </p>
@@ -66,8 +66,11 @@ export default function ContactPage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="section-shell pt-0">
-        <div className="overflow-hidden rounded-[2rem] border border-brand-line bg-white shadow-[0_28px_80px_rgba(43,76,101,0.1)]">
+      <AnimatedSection className="section-shell section-contact">
+        <div
+          className="overflow-hidden rounded-[2rem] border border-brand-line bg-brand-surface"
+          style={{ boxShadow: "var(--shadow-premium)" }}
+        >
           <div className="border-b border-brand-line px-6 py-6 sm:px-8">
             <SectionHeading
               eyebrow="Google Maps"
