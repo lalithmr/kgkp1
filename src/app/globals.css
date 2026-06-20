@@ -21,18 +21,18 @@
   --brand-button-active: #11122D;
   --shadow-premium: 0 12px 40px -10px rgba(43, 76, 101, 0.15), 0 0 0 1px rgba(43, 76, 101, 0.05);
 
-  /* Typography Variables Default to Mobile */
+  /* Typography Variables Fluid Scale */
   --font-heading: var(--font-outfit);
   --font-body: var(--font-inter);
 
   --weight-h1: 700;
   --weight-h2: 700;
-  --weight-h3: 500;
+  --weight-h3: 600;
 
-  --h1-size: clamp(2rem, 6vw, 2.75rem);
-  --h2-size: clamp(1.75rem, 5vw, 2.25rem);
-  --h3-size: clamp(1.35rem, 4vw, 1.75rem);
-  --body-size: clamp(1rem, 2vw, 1.125rem);
+  --h1-size: clamp(2.5rem, 5vw + 1rem, 5.5rem);
+  --h2-size: clamp(2rem, 4vw + 1rem, 4rem);
+  --h3-size: clamp(1.5rem, 2vw + 1rem, 2.75rem);
+  --body-size: clamp(1rem, 0.5vw + 0.875rem, 1.25rem);
 }
 
 .dark {
@@ -72,45 +72,24 @@
 /* Tablet */
 @media (min-width: 768px) {
   :root {
-    --font-heading: var(--font-manrope);
     --weight-h1: 800;
     --weight-h2: 800;
-    --weight-h3: 600;
-
-    --h1-size: clamp(2.5rem, 5vw, 3.5rem);
-    --h2-size: clamp(2rem, 4vw, 2.75rem);
-    --h3-size: clamp(1.5rem, 3vw, 2rem);
-    --body-size: clamp(1.125rem, 1.5vw, 1.1875rem);
   }
 }
 
 /* Laptop */
 @media (min-width: 1024px) {
   :root {
-    --font-heading: var(--font-playfair);
     --weight-h1: 700;
     --weight-h2: 700;
-    --weight-h3: 600;
-
-    --h1-size: clamp(3.5rem, 5vw, 4.75rem);
-    --h2-size: clamp(2.5rem, 4vw, 3.5rem);
-    --h3-size: clamp(1.75rem, 3vw, 2.25rem);
-    --body-size: clamp(1.1875rem, 1vw, 1.25rem);
   }
 }
 
 /* Desktop */
 @media (min-width: 1440px) {
   :root {
-    --font-heading: var(--font-cormorant);
     --weight-h1: 600;
     --weight-h2: 600;
-    --weight-h3: 500;
-
-    --h1-size: clamp(4rem, 5vw, 5.5rem);
-    --h2-size: clamp(3rem, 4vw, 4rem);
-    --h3-size: clamp(2rem, 3vw, 2.75rem);
-    --body-size: clamp(1.25rem, 1vw, 1.375rem);
   }
 }
 
@@ -199,6 +178,7 @@ h3,
 p,
 .p {
   margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  max-width: min(100%, 70ch);
 }
 
 p:last-child,
@@ -423,31 +403,31 @@ p:last-child,
 
 /* Dark Mode Button Refinement */
 .dark .primary-button {
-  background: linear-gradient(135deg, #1F2154 0%, #2F327D 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 24px -6px rgba(47, 50, 125, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #4F46E5 0%, #3730A3 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px -6px rgba(79, 70, 229, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
 }
 
 .dark .primary-button:hover {
-  background: linear-gradient(135deg, #272A66 0%, #393C91 100%);
-  box-shadow: 0 12px 32px -8px rgba(47, 50, 125, 0.7), 0 0 20px -5px rgba(47, 50, 125, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  background: linear-gradient(135deg, #6366F1 0%, #4338CA 100%);
+  box-shadow: 0 12px 32px -8px rgba(99, 102, 241, 0.7), 0 0 20px -5px rgba(99, 102, 241, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .dark .primary-button:active {
-  background: linear-gradient(135deg, #1B1D4A 0%, #272A66 100%);
-  box-shadow: 0 4px 16px -4px rgba(47, 50, 125, 0.6);
+  background: linear-gradient(135deg, #3730A3 0%, #312E81 100%);
+  box-shadow: 0 4px 16px -4px rgba(79, 70, 229, 0.6);
 }
 
 .dark .secondary-button {
   background: transparent;
-  border: 1px solid #393C91;
-  color: #E2E8F0;
+  border: 1px solid #6366F1;
+  color: #E0E7FF;
 }
 
 .dark .secondary-button:hover {
-  background: rgba(47, 50, 125, 0.25);
-  border-color: #4B4FC2;
+  background: rgba(99, 102, 241, 0.15);
+  border-color: #818CF8;
   color: #FFFFFF;
 }
 

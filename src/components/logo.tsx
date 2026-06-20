@@ -24,7 +24,7 @@ export function Logo({
         width={140}
         height={140}
         priority={priority}
-        className="h-14 w-14 sm:h-16 sm:w-16 md:h-[100px] md:w-[100px] lg:h-[120px] lg:w-[120px] xl:h-[140px] xl:w-[140px] shrink-0 object-contain dark:hidden"
+        className="h-[clamp(3.5rem,8vw,8.75rem)] w-[clamp(3.5rem,8vw,8.75rem)] shrink-0 object-contain dark:hidden"
       />
       <Image
         src="/logo-dark.svg"
@@ -32,7 +32,7 @@ export function Logo({
         width={140}
         height={140}
         priority={priority}
-        className="hidden h-14 w-14 sm:h-16 sm:w-16 md:h-[100px] md:w-[100px] lg:h-[120px] lg:w-[120px] xl:h-[140px] xl:w-[140px] shrink-0 object-contain dark:block"
+        className="hidden h-[clamp(3.5rem,8vw,8.75rem)] w-[clamp(3.5rem,8vw,8.75rem)] shrink-0 object-contain dark:block"
       />
       {withWordmark ? (
         <span className="flex flex-col justify-center whitespace-nowrap">

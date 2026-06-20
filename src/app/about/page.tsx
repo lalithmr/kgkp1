@@ -20,7 +20,7 @@ export default function AboutPage() {
         description="KGKP Consultancy delivers thoughtful professional support for businesses and individuals who value clarity, responsiveness, and ethical financial guidance."
       />
 
-      <AnimatedSection className="section-shell section-spacing">
+      <AnimatedSection className="section-shell section-about">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <SectionHeading
             eyebrow="About the Firm"
@@ -31,26 +31,26 @@ export default function AboutPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-muted">
               Founder
             </p>
-            <h2 className="mt-4 font-heading text-fluid-3xl text-brand-text">
-              CA. {siteConfig.founder}
+            <h2 className="h2 mt-4 text-brand-text">
+              {siteConfig.founder}
             </h2>
-            <p className="mt-5 text-base leading-8 text-brand-body">
+            <p className="mt-5 text-brand-body">
               {aboutPageContent.message}
             </p>
           </div>
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="section-shell section-spacing">
+      <AnimatedSection className="section-shell section-about">
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="premium-card">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-muted">
               Mission
             </p>
-            <h2 className="mt-4 font-heading text-3xl text-brand-text">
+            <h2 className="h2 mt-4 text-brand-text">
               Purposeful financial service
             </h2>
-            <p className="mt-5 text-base leading-8 text-brand-body">
+            <p className="mt-5 text-brand-body">
               {aboutPageContent.mission}
             </p>
           </div>
@@ -58,17 +58,17 @@ export default function AboutPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-muted">
               Vision
             </p>
-            <h2 className="mt-4 font-heading text-3xl text-brand-text">
+            <h2 className="h2 mt-4 text-brand-text">
               Long-term trust and professional excellence
             </h2>
-            <p className="mt-5 text-base leading-8 text-brand-body">
+            <p className="mt-5 text-brand-body">
               {aboutPageContent.vision}
             </p>
           </div>
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="section-shell section-spacing">
+      <AnimatedSection className="section-shell section-about">
         <SectionHeading
           eyebrow="Professional Values"
           title="The standards that shape every client relationship"
@@ -77,7 +77,7 @@ export default function AboutPage() {
         <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {aboutPageContent.values.map((value) => (
             <div key={value} className="premium-card">
-              <p className="font-heading text-2xl text-brand-text">{value}</p>
+              <h3 className="h3 !mb-0 text-brand-text">{value}</h3>
             </div>
           ))}
         </div>

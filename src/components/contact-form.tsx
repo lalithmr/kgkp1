@@ -61,8 +61,8 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="premium-card space-y-5">
       <div>
-        <h2 className="font-heading text-3xl text-brand-text">Contact Us</h2>
-        <p className="mt-3 text-sm leading-7 text-brand-body">
+        <h2 className="h2 !mb-0 text-brand-text dark:text-brand-heading">Contact Us</h2>
+        <p className="mt-3 text-brand-body">
           Share your details below and we will get back to you as soon as possible.
         </p>
       </div>

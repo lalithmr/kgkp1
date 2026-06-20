@@ -14,10 +14,10 @@ export default function HomePage() {
             <p className="text-sm font-semibold uppercase tracking-[0.32em] text-brand-muted">
               {heroContent.eyebrow}
             </p>
-            <h1 className="mt-6 font-heading text-fluid-6xl leading-[1.02] text-brand-heading">
+            <h1 className="h1 mt-6">
               {heroContent.title}
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-brand-body sm:text-lg">
+            <p className="mt-6 max-w-2xl text-brand-body">
               {heroContent.subtitle}
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -50,10 +50,10 @@ export default function HomePage() {
               <p className="text-sm font-semibold uppercase tracking-[0.26em] text-brand-muted">
                 Where Knowledge Creates Confidence
               </p>
-              <h2 className="mt-4 font-heading text-fluid-3xl text-brand-heading">
+              <h2 className="h2 mt-4">
                 KGKP Consultancy
               </h2>
-              <p className="mt-3 text-lg text-brand-primary">
+              <p className="mt-3 font-medium text-brand-primary">
                 Chartered Accountants & Business Advisors
               </p>
               <div className="mt-8 space-y-4 rounded-[2rem] bg-brand-soft/75 p-6">
@@ -62,7 +62,7 @@ export default function HomePage() {
                     Founder
                   </p>
                   <p className="mt-1 text-xl font-medium text-brand-heading">
-                    CA. {siteConfig.founder}
+                    {siteConfig.founder}
                   </p>
                 </div>
                 <div>
@@ -72,7 +72,7 @@ export default function HomePage() {
                   <a href={siteConfig.phoneHref} className="mt-1 block text-xl text-brand-heading transition hover:text-brand-primary">
                     {siteConfig.phone}
                   </a>
-                  <a href={siteConfig.emailHref} className="block text-base text-brand-body transition hover:text-brand-primary">
+                  <a href={siteConfig.emailHref} className="block text-brand-body transition hover:text-brand-primary">
                     {siteConfig.email}
                   </a>
                 </div>
@@ -80,7 +80,7 @@ export default function HomePage() {
                   <p className="text-xs uppercase tracking-[0.22em] text-brand-muted">
                     Office
                   </p>
-                  <p className="mt-1 text-base leading-7 text-brand-body">
+                  <p className="mt-1 text-brand-body">
                     {siteConfig.address}
                   </p>
                 </div>
@@ -105,7 +105,7 @@ export default function HomePage() {
               "Professional support designed for responsive execution",
             ].map((item) => (
               <div key={item} className="premium-card card-feature min-h-40 flex items-center">
-                <p className="font-heading text-2xl text-brand-heading">{item}</p>
+                <h3 className="h3 !mb-0 text-brand-heading">{item}</h3>
               </div>
             ))}
           </div>
@@ -138,7 +138,7 @@ export default function HomePage() {
                 <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-brand-primary text-white">
                   +
                 </span>
-                <p className="text-lg leading-8 text-brand-heading">{item}</p>
+                <p className="text-brand-heading">{item}</p>
               </div>
             ))}
           </div>
@@ -151,10 +151,10 @@ export default function HomePage() {
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-muted">
               Ready to Talk?
             </p>
-            <h2 className="mt-4 font-heading text-fluid-3xl leading-tight text-brand-heading">
+            <h2 className="h2 mt-4">
               Build financial confidence with timely, practical support.
             </h2>
-            <p className="mt-5 text-base leading-8 text-brand-body sm:text-lg">
+            <p className="mt-5 text-brand-body">
               Speak with KGKP Consultancy for accounting, taxation, compliance,
               registrations, and advisory support tailored to your requirements.
             </p>

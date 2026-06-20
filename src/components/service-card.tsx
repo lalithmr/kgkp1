@@ -28,7 +28,7 @@ export function ServiceCard({
           <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-primary dark:bg-brand-accent text-sm font-semibold tracking-[0.16em] text-white shadow-lg shadow-brand-primary/15 transition-transform duration-300 group-hover:scale-110">
             {String(index + 1).padStart(2, "0")}
           </span>
-          <h3 className="font-heading text-2xl text-brand-text dark:text-brand-heading transition-colors duration-300 group-hover:text-brand-primary dark:group-hover:text-white">{title}</h3>
+          <h3 className="h3 !mb-0 text-brand-text dark:text-brand-heading transition-colors duration-300 group-hover:text-brand-primary dark:group-hover:text-white">{title}</h3>
         </div>
         <p className="mt-5 text-base leading-8 text-brand-body dark:text-brand-body">{description}</p>
         <ul className="mt-6 grid gap-3 text-sm leading-7 text-brand-text dark:text-brand-text">

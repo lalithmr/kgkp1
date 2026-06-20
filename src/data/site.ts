@@ -19,7 +19,7 @@ export const siteConfig = {
   mapsEmbed:
     "https://www.google.com/maps?q=%232073-B%2C%20Devapriya%20Palace%2C%204th%20Cross%20Road%2C%20Judicial%20Layout%2C%20Yelahanka%2C%20Bangalore%20North%20-%20560064&z=15&output=embed",
   description:
-    "KGKP Consultancy is a professional Chartered Accountancy firm led by CA. Anil K.P., delivering reliable, practical, and client-focused accounting, taxation, and compliance solutions.",
+    "KGKP Consultancy is a professional Chartered Accountancy firm led by Anil K.P., delivering reliable, practical, and client-focused accounting, taxation, and compliance solutions.",
   navItems: [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },

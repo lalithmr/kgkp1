@@ -12,7 +12,7 @@ export function Footer() {
           <Logo withWordmark={false} />
           <div>
             <p className="font-heading text-2xl text-brand-heading">KGKP Consultancy</p>
-            <p className="mt-2 max-w-md text-sm leading-7 text-brand-body dark:text-brand-muted">
+            <p className="mt-2 max-w-md text-brand-body dark:text-brand-muted">
               Chartered Accountants & Business Advisors delivering clear,
               dependable support in taxation, compliance, accounting, and
               business setup.
@@ -22,7 +22,7 @@ export function Footer() {
 
         <div>
           <p className="font-heading text-xl text-brand-heading">Quick Links</p>
-          <div className="mt-5 flex flex-col gap-3 text-sm text-brand-body dark:text-brand-muted">
+          <div className="mt-5 flex flex-col gap-3 text-brand-body dark:text-brand-muted">
             {siteConfig.navItems.map((item) => (
               <Link
                 key={item.href}
@@ -37,7 +37,7 @@ export function Footer() {
 
         <div>
           <p className="font-heading text-xl text-brand-heading">Contact</p>
-          <div className="mt-5 space-y-3 text-sm leading-7 text-brand-body dark:text-brand-muted">
+          <div className="mt-5 space-y-3 text-brand-body dark:text-brand-muted">
             <a href={siteConfig.phoneHref} className="inline-block transition-all duration-300 hover:-translate-y-1 hover:text-brand-primary dark:hover:text-brand-accent">
               {siteConfig.phone}
             </a>

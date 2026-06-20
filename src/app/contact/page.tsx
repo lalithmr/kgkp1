@@ -56,7 +56,7 @@ export default function ContactPage() {
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-muted">
                 Address
               </p>
-              <div className="mt-5 space-y-1 text-base leading-8 text-brand-body">
+              <div className="mt-5 space-y-1 text-brand-body">
                 {siteConfig.addressLines.map((line) => (
                   <p key={line}>{line}</p>
                 ))}
