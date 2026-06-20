@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-brand-line bg-brand-surface dark:bg-[#0B1120] text-brand-text transition-colors duration-300">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-primary/20 dark:via-brand-accent/30 to-transparent" />
-      <div className="mx-auto grid w-full max-w-[100%] gap-10 section-footer lg:grid-cols-[1.3fr_0.9fr_1fr] px-[20px] md:px-[32px] lg:px-[48px] xl:px-[64px] min-[1600px]:max-w-[1600px] min-[1600px]:px-[80px]">
+      <div className="mx-auto grid w-full max-w-[1600px] gap-10 section-footer lg:grid-cols-[1.3fr_0.9fr_1fr] px-[clamp(1.25rem,4vw,5rem)]">
         <div className="space-y-5">
           <Logo withWordmark={false} />
           <div>

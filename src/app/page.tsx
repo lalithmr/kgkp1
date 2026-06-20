@@ -125,7 +125,7 @@ export default function HomePage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="section-shell section-about">
+      <AnimatedSection className="section-shell section-why">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <SectionHeading
             eyebrow="Why Choose Us"

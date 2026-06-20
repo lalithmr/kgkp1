@@ -22,7 +22,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-brand-line bg-[rgba(255,255,255,0.84)] dark:bg-[rgba(11,16,32,0.84)] backdrop-blur-xl transition-colors duration-300">
-      <div className="mx-auto flex w-full max-w-[100%] items-center justify-between gap-4 px-[20px] py-3 md:px-[32px] lg:px-[48px] xl:px-[64px] min-[1600px]:max-w-[1600px] min-[1600px]:px-[80px]">
+      <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between gap-[clamp(0.5rem,1vw,1.5rem)] px-[clamp(1.25rem,4vw,5rem)] h-[clamp(70px,8vw,100px)]">
         <Logo priority />
 
         <nav className="hidden items-center gap-2 md:flex">
